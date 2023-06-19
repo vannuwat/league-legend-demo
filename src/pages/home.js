@@ -59,18 +59,6 @@ function HomePage() {
     contentSection.scrollIntoView({ behavior: 'smooth' });
   };
 
-  window.addEventListener('load', function() {
-    var video = document.getElementById('video');
-  
-    video.onloadeddata = function() {
-      video.style.display = 'block';
-    };
-  
-    video.onwaiting = function() {
-      video.style.display = 'none';
-    };
-  });
-
   return (
     <>
       <nav class="flex bg-black w-full h-20 text-white justify-center items-center fixed z-50 sm:justift-between sm:text-sm" >
@@ -97,12 +85,12 @@ function HomePage() {
 
       <div class="bg-gradient-to-b from-black to-white max-h-[45rem] md:h-[30rem] sm:h-[15rem]">
         <div class="w-full max-h-[40rem] overflow-hidden z-10 h-full">
-          <video id="video" autoPlay loop muted class="video-bg blur-none md:blur lg:blur xl:blur">
+          <video id="video" autoPlay loop muted poster="" class="video-bg blur-none md:blur lg:blur xl:blur">
             <source src={videoUrl} type="video/webm" />
           </video>
         </div>
         <div class="w-9/12 items-center justify-center z-20 m-auto translate-y-[-60%] md:translate-y-[-70%]">
-          <video id="video" autoPlay loop muted class="video-element sm:hidden">
+          <video id="video" autoPlay loop muted poster="" class="video-element sm:hidden">
             <source src={videoUrl} type="video/webm" />
           </video>
            <div class="w-full z-30 translate-y-[-150%] sm:translate-y-[-70%]">
@@ -302,37 +290,37 @@ function HomePage() {
             <div class="mx-auto my-5 max-h-72 border-4 border-double border-[#c9a156] p-2">
  
             {roles === "Assassins" && (
-               <video id="video" autoPlay loop muted class="w-[30rem] h-auto sm:w-[20rem]">
+               <video id="video" autoPlay loop muted poster="" class="w-[30rem] h-auto sm:w-[20rem]">
                <source src={assassinsUrl} type="video/webm" />
              </video>
 
             )}
             {roles === "Fighters" && (
-               <video id="video" autoPlay loop muted class="w-[30rem] h-auto sm:w-[20rem]">
+               <video id="video" autoPlay loop muted poster="" class="w-[30rem] h-auto sm:w-[20rem]">
                <source src={fightersUrl} type="video/webm" />
              </video>
 
             )}
             {roles === "Mages" && (
-               <video autoPlay loop muted class="w-[30rem] h-auto sm:w-[20rem]">
+               <video autoPlay loop muted poster="" class="w-[30rem] h-auto sm:w-[20rem]">
                <source src={magesUrl} type="video/webm" />
              </video>
 
             )}
             {roles === "Marksmen" && (
-               <video id="video" autoPlay loop muted class="w-[30rem] h-auto sm:w-[20rem]">
+               <video id="video" autoPlay loop muted poster="" class="w-[30rem] h-auto sm:w-[20rem]">
                <source src={adcUrl} type="video/webm" />
              </video>
 
             )}
             {roles === "Supports" && (
-               <video id="video" autoPlay loop muted class="w-[30rem] h-auto sm:w-[20rem]">
+               <video id="video" autoPlay loop muted poster="" class="w-[30rem] h-auto sm:w-[20rem]">
                <source src={supportUrl} type="video/webm" />
              </video>
 
             )}
             {roles === "Tanks" && (
-               <video id="video" autoPlay loop muted class="w-[30rem] h-auto sm:w-[20rem]">
+               <video id="video" autoPlay loop muted poster="" class="w-[30rem] h-auto sm:w-[20rem]">
                <source src={tankUrl} type="video/webm" />
              </video>
 
